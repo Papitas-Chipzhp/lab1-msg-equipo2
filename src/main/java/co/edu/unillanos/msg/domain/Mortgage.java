@@ -13,7 +13,7 @@ public final class Mortgage {
     private static final BigDecimal WEEKS_PER_YEAR = new BigDecimal("52");
 
     // TODO (RN4): declare aquí, una sola vez y con nombre, el porcentaje máximo
-    //             del ingreso que aporta la pareja (28 %).
+    // del ingreso que aporta la pareja (28 %).
 
     private final String mortgageNumber;
     private final BigDecimal weeklyPrincipalAndInterest;
@@ -25,15 +25,15 @@ public final class Mortgage {
     // atributos al construir la hipoteca, o se calculan cada vez que se piden?
 
     public Mortgage(String mortgageNumber, BigDecimal weeklyPrincipalAndInterest,
-                    BigDecimal annualPropertyTax, BigDecimal annualInsurancePremium,
-                    BigDecimal coupleWeeklyIncome) {
+            BigDecimal annualPropertyTax, BigDecimal annualInsurancePremium,
+            BigDecimal coupleWeeklyIncome) {
         this.mortgageNumber = Objects.requireNonNull(mortgageNumber);
         this.weeklyPrincipalAndInterest = Objects.requireNonNull(weeklyPrincipalAndInterest);
         this.annualPropertyTax = Objects.requireNonNull(annualPropertyTax);
         this.annualInsurancePremium = Objects.requireNonNull(annualInsurancePremium);
         this.coupleWeeklyIncome = Objects.requireNonNull(coupleWeeklyIncome);
         // TODO (R6): rechazar con IllegalArgumentException un ingreso semanal
-        //            de la pareja menor o igual a cero.
+        // de la pareja menor o igual a cero.
     }
 
     public String mortgageNumber() {
